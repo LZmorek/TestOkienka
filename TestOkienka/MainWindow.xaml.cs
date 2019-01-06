@@ -33,21 +33,9 @@ namespace TestOkienka
         
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            while (true)
-            {
-                string passWritten = Pass.Text;
-                if (passWritten.Contains("tajemnica"))
-                {
-                    MessageBox.Show("Dobra robota");
-                    break;
-                }
-                else
-                {
-                    MessageBox.Show("wpisz ponownie haslo");
-                    break;
-
-                }
-            }
+            Window2 win2 = new Window2();
+            win2.Show();
+            this.Close();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
