@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestOkienka"
         mc:Ignorable="d"
-        Title="MenuPowitalne" Height="450" Width="800">
+        Title="MenuPowitalne" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid Background="#FF749EF7">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="679*"/>
+            <ColumnDefinition Width="113*"/>
+        </Grid.ColumnDefinitions>
         <Label Content="Kolejne Okno" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="280,45,0,0" Height="44" Width="236" FontFamily="MS Reference Sans Serif" FontSize="22" FontWeight="Bold" HorizontalContentAlignment="Center"/>
         <Button Content="Kolejne Okno" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="149,297,0,0" Height="40" RenderTransformOrigin="0.509,1.684" Background="#FFF0E730" FontWeight="Bold" FontFamily="MS Reference Sans Serif" />
         <Button Content="Glowne Okno" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="451,297,0,0" Height="40" Background="#FFF3B13E" FontWeight="Bold" FontFamily="MS Reference Sans Serif" Click="Button_Click"/>

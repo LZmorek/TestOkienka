@@ -70,7 +70,7 @@ namespace TestOkienka
             }
         }
 
-                public void Button_Click_2(object sender, RoutedEventArgs e)
+                private void Button_Click_2(object sender, RoutedEventArgs e)
 
                 {
                     while (true)
