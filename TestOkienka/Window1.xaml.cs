@@ -20,12 +20,16 @@ namespace TestOkienka
     /// </summary>
     public partial class Window1 : Window
     {
+        
+
+        String[] passArray = new String[3]
+               {"kupa" , "gowno" , "sraka"};
         String passWritten;
         String[] LoginArray = new String[]
         {
             "GemiRKT","Noraz",
         };
-
+        
         public Window1()
         {
             InitializeComponent();
@@ -40,8 +44,11 @@ namespace TestOkienka
 
         private void CreateAccount()
         {
+            
             Window1 NewAccount = new Window1();
             NewAccount.CreateLogin();
+
+           
           
         }
 
@@ -50,8 +57,8 @@ namespace TestOkienka
             
             while (true)
             {
-                passWritten = pass1.Text;
 
+                passWritten = pass1.Text;
 
                 if (LoginArray.Contains(passWritten))
                 {
@@ -73,17 +80,38 @@ namespace TestOkienka
         }
         private void CreatePassword()
         {
+            while (true)
+            {
+                passWritten = pass2.Text;
 
+                if (passArray.Contains(passWritten))
+                {
+                    MessageBox.Show("Swietnie! Kupa radosci!");
+                    break;
+                }
+
+                else
+                {
+                    MessageBox.Show("Wez sie do kupy chopie!");
+                    break;
+
+                }
+
+            }
         }
 
         private void Pass1_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
+        private void Pass2_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        }
+        public void Button_Click_1(object sender, RoutedEventArgs e)
         {
             CreateLogin();
+            CreatePassword();
         }
     }
 }

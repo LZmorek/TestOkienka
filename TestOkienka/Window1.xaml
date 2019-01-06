@@ -10,9 +10,9 @@
         <Label Content="Kolejne Okno" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="280,45,0,0" Height="44" Width="236" FontFamily="MS Reference Sans Serif" FontSize="22" FontWeight="Bold" HorizontalContentAlignment="Center"/>
         <Button Content="Kolejne Okno" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="149,297,0,0" Height="40" RenderTransformOrigin="0.509,1.684" Background="#FFF0E730" FontWeight="Bold" FontFamily="MS Reference Sans Serif" />
         <Button Content="Glowne Okno" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="451,297,0,0" Height="40" Background="#FFF3B13E" FontWeight="Bold" FontFamily="MS Reference Sans Serif" Click="Button_Click"/>
-        <Button Content="Stworz Konto" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="280,222,0,0" Height="40" RenderTransformOrigin="0.509,1.684" Background="#FFF0E730" FontWeight="Bold" FontFamily="MS Reference Sans Serif" Click="Button_Click_1" />
+        <Button Content="Stworz Konto" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="280,222,0,0" Height="40" RenderTransformOrigin="0.509,1.684" Background="#FFF0E730" FontWeight="Bold" FontFamily="MS Reference Sans Serif" Click="Button_Click_1"/>
         <TextBox x:Name="pass1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="120" Margin="321,118,0,0" TextChanged="Pass1_TextChanged"/>
-        <TextBox x:Name="pass2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Haslo" VerticalAlignment="Top" Width="120" Margin="321,161,0,0"/>
+        <TextBox x:Name="pass2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Haslo" VerticalAlignment="Top" Width="120" Margin="321,161,0,0" TextChanged="Pass2_TextChanged"/>
 
     </Grid>
 </Window>
