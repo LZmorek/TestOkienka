@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Navigation;
 
 namespace TestOkienka
 {
@@ -19,6 +20,12 @@ namespace TestOkienka
     /// </summary>
     public partial class Window1 : Window
     {
+        String passWritten;
+        String[] LoginArray = new String[]
+        {
+            "GemiRKT","Noraz",
+        };
+
         public Window1()
         {
             InitializeComponent();
@@ -29,6 +36,54 @@ namespace TestOkienka
             MainWindow mainwindow= new MainWindow();
             mainwindow.Show();
             this.Close();
+        }
+
+        private void CreateAccount()
+        {
+            Window1 NewAccount = new Window1();
+            NewAccount.CreateLogin();
+          
+        }
+
+        private void CreateLogin()
+        {
+            
+            while (true)
+            {
+                passWritten = pass1.Text;
+
+
+                if (LoginArray.Contains(passWritten))
+                {
+                    MessageBox.Show("Wybierz inny Login");
+                    break;
+                }
+                else 
+                {
+                    LoginArray = new List<string>(LoginArray) { passWritten }.ToArray();
+                    MessageBox.Show("Login zostal wprowadzony");
+                    break;
+                
+                }
+
+
+            }
+
+
+        }
+        private void CreatePassword()
+        {
+
+        }
+
+        private void Pass1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            CreateLogin();
         }
     }
 }
