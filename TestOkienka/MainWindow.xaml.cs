@@ -97,6 +97,13 @@ namespace TestOkienka
         {
 
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            Window1 win2 = new Window1();
+            win2.Show();
+            this.Close();
+        }
     }
 
 }

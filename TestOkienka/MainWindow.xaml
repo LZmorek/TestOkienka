@@ -6,17 +6,18 @@
         xmlns:local="clr-namespace:TestOkienka"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Background="#FFA4A4A4">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="67*"/>
-            <ColumnDefinition Width="197*"/>
-            <ColumnDefinition Width="0*"/>
-        </Grid.ColumnDefinitions>
-        <Button Content="Metoda Contain" HorizontalAlignment="Left" Margin="30,62,0,0" VerticalAlignment="Top" Width="134" RenderTransformOrigin="-0.467,0.709" Height="29" Click="Button_Click"/>
-        <Button Content="Metoda Equal" HorizontalAlignment="Left" Margin="30,157,0,0" VerticalAlignment="Top" Width="134" RenderTransformOrigin="0.474,0.169" Height="29" Click="Button_Click_1"/>
-        <Button Content="Metoda Array" HorizontalAlignment="Left" Margin="30,251,0,0" VerticalAlignment="Top" Width="134" Height="28" Click="Button_Click_2"/>
-        <Label Content="Witam! Prosze wpisac haslo, następnie&#xD;&#xA;wybrac jedna z trzech metod do &#xD;&#xA;sprawdzenia poprawnosci hasła&#xD;&#xA;Powodzenia!" Grid.Column="1" HorizontalAlignment="Left" Margin="105,62,0,0" VerticalAlignment="Top" Height="124" Width="433" FontSize="22" FontWeight="Bold"/>
-        <TextBox x:Name="Pass" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="206,251,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="191" RenderTransformOrigin="0.256,-0.864" TextChanged="TextBox_TextChanged"/>
+  <Grid Background="#FFA4A4A4">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="67*"/>
+      <ColumnDefinition Width="197*"/>
+      <ColumnDefinition Width="0*"/>
+    </Grid.ColumnDefinitions>
+    <Button Content="Metoda Contain" HorizontalAlignment="Left" Margin="30,62,0,0" VerticalAlignment="Top" Width="134" RenderTransformOrigin="-0.467,0.709" Height="29" Click="Button_Click"/>
+    <Button Content="Metoda Equal" HorizontalAlignment="Left" Margin="30,157,0,0" VerticalAlignment="Top" Width="134" RenderTransformOrigin="0.474,0.169" Height="29" Click="Button_Click_1"/>
+    <Button Content="Metoda Array" HorizontalAlignment="Left" Margin="30,251,0,0" VerticalAlignment="Top" Width="134" Height="28" Click="Button_Click_2"/>
+    <Label Content="Witam! Prosze wpisac haslo, następnie&#xD;&#xA;wybrac jedna z trzech metod do &#xD;&#xA;sprawdzenia poprawnosci hasła&#xD;&#xA;Powodzenia!" Grid.Column="1" HorizontalAlignment="Left" Margin="105,62,0,0" VerticalAlignment="Top" Height="124" Width="433" FontSize="22" FontWeight="Bold"/>
+    <TextBox x:Name="Pass" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="206,251,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="191" RenderTransformOrigin="0.256,-0.864" TextChanged="TextBox_TextChanged"/>
+    <Button Content="KolejneMenu" HorizontalAlignment="Left" Margin="30,316,0,0" VerticalAlignment="Top" Width="134" Height="30" Click="Button_Click_3"  />
 
-    </Grid>
+  </Grid>
 </Window>
