@@ -5,19 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestOkienka"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
-    <Grid Background="#FFA4A4A4">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="67*"/>
-            <ColumnDefinition Width="197*"/>
-            <ColumnDefinition Width="0*"/>
-        </Grid.ColumnDefinitions>
-        <Button Content="Metoda Contain" HorizontalAlignment="Left" Margin="30,62,0,0" VerticalAlignment="Top" Width="134" RenderTransformOrigin="-0.467,0.709" Height="29" Click="Button_Click" Foreground="Black" BorderBrush="#FFF9F6F5" BorderThickness="2" Background="#FF40EED6"/>
-        <Button Content="Metoda Equal" HorizontalAlignment="Left" Margin="30,157,0,0" VerticalAlignment="Top" Width="134" RenderTransformOrigin="0.474,0.169" Height="29" Click="Button_Click_1"/>
-        <Button Content="Metoda Array" HorizontalAlignment="Left" Margin="30,251,0,0" VerticalAlignment="Top" Width="134" Height="28" Click="Button_Click_2"/>
-        <Label Content="Witam! Prosze wpisac haslo, następnie&#xD;&#xA;wybrac jedna z trzech metod do &#xD;&#xA;sprawdzenia poprawnosci hasła&#xD;&#xA;Powodzenia!" Grid.Column="1" HorizontalAlignment="Left" Margin="105,62,0,0" VerticalAlignment="Top" Height="124" Width="433" FontSize="22" FontWeight="Bold"/>
-        <TextBox x:Name="Pass" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="206,251,0,0" TextWrapping="Wrap" Text="Wpisz tutaj" VerticalAlignment="Top" Width="191" RenderTransformOrigin="0.256,-0.864" TextChanged="TextBox_TextChanged"/>
-        <Button Content="Kolejne Okno" HorizontalAlignment="Left" Margin="30,308,0,0" VerticalAlignment="Top" Width="134" Height="28" Click="Button_Click_3" />
-
+        Title="Haselek" WindowStartupLocation="CenterScreen" Background="#FF746E6E" Opacity="0.995">
+    <Window.Effect>
+        <DropShadowEffect RenderingBias="Quality"/>
+    </Window.Effect>
+    <Grid Height="145" Margin="50,294,50,0" VerticalAlignment="Top">
+        <Button Content="Array&#xD;&#xA;Method" Margin="460,50,30,42" RenderTransformOrigin="0.484,0.495" Click="Array_Method"/>
+        <Button Content="Equal&#xD;&#xA;Method" HorizontalAlignment="Left" Width="170" Margin="30,50,0,47" Click="Equal_Method"/>
+        <Button Content="Contains&#xD;&#xA;Method" Margin="240,50,240,0" VerticalAlignment="Top" Height="48" Click="Contains_Method" Width="160"/>
+        <Label Content="&#x9;&#x9;&#x9;Witamy!&#xD;&#xA;Zapraszamy do Zabawy w zgadywanki durnych haseł!&#xD;&#xA;Poniżej są trzy metody którymi zapisaliśmy hasła ,&#xD;&#xA;a ty masz odgadnac w tych metodach hasło.&#xD;&#xA;Powodzenia!&#xD;&#xA;" Height="157" Margin="105,-246,105,0" VerticalAlignment="Top" FontSize="18" FontWeight="SemiBold" FontStyle="Italic" TextOptions.TextHintingMode="Animated"/>
     </Grid>
 </Window>
