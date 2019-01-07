@@ -15,9 +15,7 @@ using System.Windows.Shapes;
 
 namespace TestOkienka
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -25,71 +23,25 @@ namespace TestOkienka
             InitializeComponent();
         }
 
-        String passWritten;
-        String passConst = "Zupa Pomidorowa";
-        String[] passArray = new String[3]
-               {"kupa" , "gowno" , "sraka"};
-
-        
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Equal_Method(object sender, RoutedEventArgs e)
         {
-            Window2 win2 = new Window2();
-            win2.Show();
+            Window1 EM = new Window1();
+            EM.Show();
             this.Close();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Contains_Method(object sender, RoutedEventArgs e)
         {
-            while (true)
-            {
-                passWritten = Pass.Text;
-
-                if (passWritten.Equals(passConst))
-                {
-                    MessageBox.Show("jestes super odgadles haslo");
-                    break;
-                }
-                else
-                {
-                    MessageBox.Show("jestes Baran spróbuj ponownie:");
-                    break;
-
-                }
-            }
-        }
-
-                private void Button_Click_2(object sender, RoutedEventArgs e)
-
-                {
-                    while (true)
-                    {
-                        passWritten = Pass.Text; 
-
-                        if (passArray.Contains(passWritten))
-                        {
-                            MessageBox.Show("Swietnie! Kupa radosci!");
-                            break;
-                        }
-
-                        else
-                        {
-                            MessageBox.Show("Wez sie do kupy chopie!");
-                            break;
-
-                        }
-
-                    }
-                }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
+            Window2 MC = new Window2();
+            MC.Show();
+            this.Close();
 
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+        private void Array_Method(object sender, RoutedEventArgs e)
         {
-            Window1 win1 = new Window1();
-            win1.Show();
+            Window3 AM = new Window3();
+            AM.Show();
             this.Close();
 
         }

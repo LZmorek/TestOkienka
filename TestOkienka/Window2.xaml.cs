@@ -14,9 +14,7 @@ using System.Windows.Shapes;
 
 namespace TestOkienka
 {
-    /// <summary>
-    /// Interaction logic for Window2.xaml
-    /// </summary>
+  
     public partial class Window2 : Window
     {
         
@@ -25,37 +23,25 @@ namespace TestOkienka
             InitializeComponent();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void CheckPassword_Click(object sender, RoutedEventArgs e)
         {
-            String passWritten;
-            passWritten = TextBox.Text;
-            while (true)
-            {
-                
-                if (passWritten.Contains("tajemnica"))
-                {
-                    MessageBox.Show("Dobra robota");
-                    break;
-                }
-                else
-                {
-                    MessageBox.Show("wpisz ponownie haslo");
-                    break;
 
-                }
-            }
+            string passWrittenCM = TextBox.Text; 
+            PasswordChecker Contains = new PasswordChecker();
+            Contains.ContainsMethod(passWrittenCM);
+
         }
 
         private void MenuGlowne_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainwindow = new MainWindow();
-            mainwindow.Show();
+            MainWindow back = new MainWindow();
+            back.Show();
             this.Close();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
