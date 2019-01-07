@@ -5,12 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestOkienka"
         mc:Ignorable="d"
-        Title="Window3" Height="450" Width="800">
+        Title="Window3" Height="500" Width="700" WindowStartupLocation="CenterScreen">
     <Grid Background="#FFB586C3">
-        <Button Content="Sprawdz Hasło" HorizontalAlignment="Left" Margin="294,284,0,0" VerticalAlignment="Top" Width="195" Click="Password_Checker"/>
-        <Label Content="Array Method" HorizontalAlignment="Left" Margin="326,116,0,0" VerticalAlignment="Top" Width="144" Height="55" FontSize="20" FontWeight="Bold" TextOptions.TextFormattingMode="Display"/>
-        <Button Content="Powrót" HorizontalAlignment="Left" Margin="621,324,0,0" VerticalAlignment="Top" Width="117" Height="33" Click="Back"/>
-        <TextBox x:Name ="Pass" HorizontalAlignment="Left" Height="23" Margin="326,204,0,0" TextWrapping="Wrap" Text="Wpisz Hasło" VerticalAlignment="Top" Width="144" TextChanged="TextBox_TextChanged"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Sprawdz Hasło" HorizontalAlignment="Left" Margin="228,266,0,0" VerticalAlignment="Top" Width="195" Click="Password_Checker" Grid.ColumnSpan="2"/>
+        <Label Content="Array Method" HorizontalAlignment="Left" Margin="255,112,0,0" VerticalAlignment="Top" Width="144" Height="55" FontSize="20" FontWeight="Bold" TextOptions.TextFormattingMode="Display" Grid.ColumnSpan="2"/>
+        <Button Content="Powrót" HorizontalAlignment="Left" Margin="565,387,0,0" VerticalAlignment="Top" Width="117" Height="33" Click="Back" Grid.ColumnSpan="2"/>
+        <TextBox x:Name ="Pass" HorizontalAlignment="Left" Height="23" Margin="255,192,0,0" TextWrapping="Wrap" Text="Wpisz Hasło" VerticalAlignment="Top" Width="144" TextChanged="TextBox_TextChanged" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>

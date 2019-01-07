@@ -5,14 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestOkienka"
         mc:Ignorable="d"
-        Title="Haselek" WindowStartupLocation="CenterScreen" Background="#FF746E6E" Opacity="0.995">
+        Title="Haselek" WindowStartupLocation="CenterScreen" Background="#FF746E6E" Opacity="0.995" ResizeMode="NoResize" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="500" Width="700">
     <Window.Effect>
         <DropShadowEffect RenderingBias="Quality"/>
     </Window.Effect>
-    <Grid Height="145" Margin="50,294,50,0" VerticalAlignment="Top">
-        <Button Content="Array&#xD;&#xA;Method" Margin="460,50,30,42" RenderTransformOrigin="0.484,0.495" Click="Array_Method"/>
-        <Button Content="Equal&#xD;&#xA;Method" HorizontalAlignment="Left" Width="170" Margin="30,50,0,47" Click="Equal_Method"/>
-        <Button Content="Contains&#xD;&#xA;Method" Margin="240,50,240,0" VerticalAlignment="Top" Height="48" Click="Contains_Method" Width="160"/>
-        <Label Content="&#x9;&#x9;&#x9;Witamy!&#xD;&#xA;Zapraszamy do Zabawy w zgadywanki durnych haseł!&#xD;&#xA;Poniżej są trzy metody którymi zapisaliśmy hasła ,&#xD;&#xA;a ty masz odgadnac w tych metodach hasło.&#xD;&#xA;Powodzenia!&#xD;&#xA;" Height="157" Margin="105,-246,105,0" VerticalAlignment="Top" FontSize="18" FontWeight="SemiBold" FontStyle="Italic" TextOptions.TextHintingMode="Animated"/>
+    <Grid >
+        <Grid.ColumnDefinitions>
+
+        </Grid.ColumnDefinitions>
+        <Button Content="Array&#xD;&#xA;Method" RenderTransformOrigin="0.484,0.495" Click="Array_Method" Height="48" Width="134" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,34,73"/>
+        <Button Content="Equal&#xD;&#xA;Method" Click="Equal_Method" Width="137" Height="48" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="37,0,0,73"/>
+        <Button Content="Contains&#xD;&#xA;Method" Margin="192,0,197,73" Click="Contains_Method" Width="160" HorizontalAlignment="Center" Height="48" VerticalAlignment="Bottom" RenderTransformOrigin="1.444,0.5"/>
+        <Label Content="&#x9;&#x9;&#x9;Witamy!&#xD;&#xA;Zapraszamy do Zabawy w zgadywanki durnych haseł!&#xD;&#xA;Poniżej są trzy metody którymi zapisaliśmy hasła ,&#xD;&#xA;a ty masz odgadnac w tych metodach hasło.&#xD;&#xA;Powodzenia!&#xD;&#xA;" Height="184" Margin="40,45,49,0" VerticalAlignment="Top" FontSize="18" FontWeight="SemiBold" FontStyle="Italic" TextOptions.TextHintingMode="Animated" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Width="460"/>
     </Grid>
 </Window>
