@@ -5,18 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestOkienka"
         mc:Ignorable="d"
-        Title="MenuPowitalne" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="Equals Method" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid Background="#FF749EF7">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="679*"/>
-            <ColumnDefinition Width="113*"/>
+            <ColumnDefinition Width="395*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label Content="Kolejne Okno" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="280,45,0,0" Height="44" Width="236" FontFamily="MS Reference Sans Serif" FontSize="22" FontWeight="Bold" HorizontalContentAlignment="Center"/>
-        <Button Content="Kolejne Okno" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="149,297,0,0" Height="40" RenderTransformOrigin="0.509,1.684" Background="#FFF0E730" FontWeight="Bold" FontFamily="MS Reference Sans Serif" />
-        <Button Content="Glowne Okno" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="451,297,0,0" Height="40" Background="#FFF3B13E" FontWeight="Bold" FontFamily="MS Reference Sans Serif" Click="Button_Click"/>
-        <Button Content="Stworz Konto" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="280,222,0,0" Height="40" RenderTransformOrigin="0.509,1.684" Background="#FFF0E730" FontWeight="Bold" FontFamily="MS Reference Sans Serif" Click="Button_Click_1"/>
-        <TextBox x:Name="pass1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="120" Margin="321,118,0,0" TextChanged="Pass1_TextChanged"/>
-        <TextBox x:Name="pass2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Haslo" VerticalAlignment="Top" Width="120" Margin="321,161,0,0" TextChanged="Pass2_TextChanged"/>
+        <Label Content="Equals Method" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="280,45,0,0" Height="44" Width="236" FontFamily="MS Reference Sans Serif" FontSize="22" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name= "pass" HorizontalAlignment="Left" Height="23" Margin="280,170,0,0" TextWrapping="Wrap" Text="Wpisz Hasło" VerticalAlignment="Top" Width="236" TextChanged="TextBox_TextChanged"/>
+        <Button Content="SPRAWDZ HASL0&#xD;&#xA;" HorizontalAlignment="Left" Margin="341,357,0,0" VerticalAlignment="Top" Width="120" Height="19" Click="Password_Checker" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center" UseLayoutRounding="True" FontSize="11" RenderTransformOrigin="0.491,0.586" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.IsSharedSizeScope="True" FontWeight="Bold" Background="#FFF00000"/>
+        <Button Content="Powrót" HorizontalAlignment="Left" Margin="588,332,0,0" VerticalAlignment="Top" Width="164" Height="37" Click="Back"/>
 
     </Grid>
 </Window>
