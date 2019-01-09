@@ -25,10 +25,26 @@ namespace TestOkienka
 
         private void CheckPassword_Click(object sender, RoutedEventArgs e)
         {
+            string TexBox1 = TextBox.Text;
+            int count = 0;
+            while (true)
+            {
 
-            string passWrittenCM = TextBox.Text; 
-            PasswordChecker Contains = new PasswordChecker();
-            Contains.ContainsMethod(passWrittenCM);
+                if (TexBox1.Contains("tajemnica"))
+                {
+                    MessageBox.Show("Dobra robota");
+                    break;
+                }
+                else
+                {
+                    MessageBox.Show("wpisz ponownie haslo");
+                    count++;
+
+                    wynik.Text = count.ToString();
+                    break;
+
+                }
+            }
 
         }
 
