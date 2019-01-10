@@ -10,10 +10,12 @@ namespace TestOkienka
     class PasswordChecker
 
     {
-       
+        
+      
         String passConst = "Zupa Pomidorowa";
         String[] passArray = new String[3]
                {"kupa" , "gowno" , "sraka"};
+        
         
 
         public void EqualMethod(string passWrittenEM)
@@ -60,12 +62,32 @@ namespace TestOkienka
             }
 
 
-        public void ContainsMethod(string passWrittenCM,string wynik1)
+
+        public void ContainsMethod(string passWrittenCM,int counterCM)
 
         {
-           
-            
-            
+
+        
+            while (true)
+            {
+                
+                if (passWrittenCM.Contains("tajemnica"))
+                {
+                    MessageBox.Show("Dobra robota");
+                    break;
+                }
+                else
+                {
+                    MessageBox.Show("wpisz ponownie haslo");
+                    
+                    counterCM++;
+
+                   
+                    break;
+
+                }
+            }
+
 
         }
 
