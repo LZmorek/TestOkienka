@@ -63,30 +63,12 @@ namespace TestOkienka
 
 
 
-        public void ContainsMethod(string passWrittenCM,int counterCM)
+        public void ContainsMethod()
 
         {
 
         
-            while (true)
-            {
-                
-                if (passWrittenCM.Contains("tajemnica"))
-                {
-                    MessageBox.Show("Dobra robota");
-                    break;
-                }
-                else
-                {
-                    MessageBox.Show("wpisz ponownie haslo");
-                    
-                    counterCM++;
-
-                   
-                    break;
-
-                }
-            }
+           
 
 
         }

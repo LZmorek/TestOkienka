@@ -24,16 +24,30 @@ namespace TestOkienka
             InitializeComponent();
         }
 
-        int counterCM = 0;
+        int counterCM = 1;
         public void CheckPassword_Click(object sender, RoutedEventArgs e)
         {
 
             
-             wynik.Text = counterCM.ToString();
-            
-            string passWrittenCM = TextBox.Text;
-            PasswordChecker conatin = new PasswordChecker();
-            conatin.ContainsMethod(passWrittenCM,counterCM);
+              while (true)
+            {
+                
+                if (TextBox.Text.Contains("tajemnica"))
+                {
+                    MessageBox.Show("Dobra robota");
+                    break;
+                }
+                else
+                {
+                    MessageBox.Show("wpisz ponownie haslo");
+                    wynik.Text = counterCM.ToString();
+                    counterCM++;
+
+                   
+                    break;
+
+                }
+            }
 
         }
 
