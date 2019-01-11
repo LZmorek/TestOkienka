@@ -18,17 +18,36 @@ namespace TestOkienka
     public partial class Window2 : Window
     {
         
+        
         public Window2()
         {
             InitializeComponent();
         }
 
+        int counterCM = 1;
         private void CheckPassword_Click(object sender, RoutedEventArgs e)
         {
 
-            string passWrittenCM = TextBox.Text; 
-            PasswordChecker Contains = new PasswordChecker();
-            Contains.ContainsMethod(passWrittenCM);
+            
+              while (true)
+            {
+                
+                if (TextBox.Text.Contains("tajemnica"))
+                {
+                    MessageBox.Show("Dobra robota");
+                    break;
+                }
+                else
+                {
+                    MessageBox.Show("wpisz ponownie haslo");
+                    wynik.Text = counterCM.ToString();
+                    counterCM++;
+
+                   
+                    break;
+
+                }
+            }
 
         }
 
@@ -40,6 +59,11 @@ namespace TestOkienka
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Wynik_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
