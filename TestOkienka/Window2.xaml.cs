@@ -25,7 +25,7 @@ namespace TestOkienka
         }
 
         int counterCM = 1;
-        public void CheckPassword_Click(object sender, RoutedEventArgs e)
+        private void CheckPassword_Click(object sender, RoutedEventArgs e)
         {
 
             
