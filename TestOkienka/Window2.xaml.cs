@@ -25,12 +25,10 @@ namespace TestOkienka
         int count = 0;
         private void CheckPassword_Click(object sender, RoutedEventArgs e)
         {       
-            string passWrittenCM = TextBox.Text;     
-            bool condition = true;   
-            PasswordChecker Contains = new PasswordChecker();
-            condition = Contains.ContainsMethod(passWrittenCM);
+            string passWrittenCM = TextBox.Text;         
+            PasswordChecker Contains = new PasswordChecker();           
             while(true)
-                if (condition)
+                if (Contains.ContainsMethod(passWrittenCM))
                 {
                     break;
                 }
@@ -42,8 +40,7 @@ namespace TestOkienka
                 }
                 
             }
-        
-
+ 
         private void MenuGlowne_Click(object sender, RoutedEventArgs e)
         {
             MainWindow back = new MainWindow();
