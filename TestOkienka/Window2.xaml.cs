@@ -22,15 +22,27 @@ namespace TestOkienka
         {
             InitializeComponent();
         }
-
+        int count = 0;
         private void CheckPassword_Click(object sender, RoutedEventArgs e)
-        {
-
-            string passWrittenCM = TextBox.Text; 
+        {       
+            string passWrittenCM = TextBox.Text;     
+            bool condition = true;   
             PasswordChecker Contains = new PasswordChecker();
-            Contains.ContainsMethod(passWrittenCM);
-
-        }
+            condition = Contains.ContainsMethod(passWrittenCM);
+            while(true)
+                if (condition)
+                {
+                    break;
+                }
+                else
+                {
+                    count++;
+                    TextBox2.Text = count.ToString(); 
+                    break;
+                }
+                
+            }
+        
 
         private void MenuGlowne_Click(object sender, RoutedEventArgs e)
         {
@@ -40,6 +52,11 @@ namespace TestOkienka
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBox2_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }

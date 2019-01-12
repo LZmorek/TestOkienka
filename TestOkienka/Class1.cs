@@ -1,20 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Data.SQLite;
+using System.Diagnostics.PerformanceData;
+using System.Dynamic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
+
 
 namespace TestOkienka
 {
     class PasswordChecker
 
     {
-       
         String passConst = "Zupa Pomidorowa";
         String[] passArray = new String[3]
                {"kupa" , "gowno" , "sraka"};
-       
+
         public void EqualMethod(string passWrittenEM)
        
 
@@ -58,28 +58,32 @@ namespace TestOkienka
                 }
             }
 
-        public void ContainsMethod(string passWrittenCM)
+        public Boolean ContainsMethod(string passWrittenCM)
 
         {
+            
+            
                 while (true)
                 {
 
                     if (passWrittenCM.Contains("tajemnica"))
                     {
                         MessageBox.Show("Dobra robota");
-                        break;
+                        return true;
                     }
                     else
                     {
                         MessageBox.Show("wpisz ponownie haslo");
-                        break;
+
+                        return false;
 
                     }
-                }
+                    
+            }
 
         }
 
-
+        
     }
 
 
