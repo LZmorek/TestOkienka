@@ -18,10 +18,12 @@ namespace TestOkienka
     public partial class Window2 : Window
     {
         
+        
         public Window2()
         {
             InitializeComponent();
         }
+
         int count = 0;
         private void CheckPassword_Click(object sender, RoutedEventArgs e)
         {       
@@ -30,10 +32,12 @@ namespace TestOkienka
             while(true)
                 if (Contains.ContainsMethod(passWrittenCM))
                 {
+
                     break;
                 }
                 else
                 {
+
                     count++;
                     TextBox2.Text = count.ToString(); 
                     break;
@@ -41,6 +45,7 @@ namespace TestOkienka
                 
             }
  
+
         private void MenuGlowne_Click(object sender, RoutedEventArgs e)
         {
             MainWindow back = new MainWindow();
@@ -53,7 +58,9 @@ namespace TestOkienka
 
         }
 
+
         private void TextBox2_TextChanged(object sender, TextChangedEventArgs e)
+
         {
 
         }
