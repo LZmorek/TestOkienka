@@ -9,9 +9,11 @@
     <Grid Background="#FF3E5EB2">
         <Label Content="  Witam w&quot;Metoda Contain&quot; &#xA;pisz haslo i sprawdz czy jest wlasciwe  " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="151,48,0,0" Height="142" Width="434" BorderBrush="#FF42F774" FontFamily="Segoe UI Black" FontWeight="Bold" FontSize="22" HorizontalContentAlignment="Right" OpacityMask="#FFF5561A" Background="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
         <TextBox x:Name="TextBox" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="246" Margin="215,190,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontWeight="Bold" TextChanged="TextBox_TextChanged"/>
-        <Button x:Name="CheckPassword" Content="SPRAWDZ" HorizontalAlignment="Left" VerticalAlignment="Top" Width="153" Margin="263,266,0,0" Height="46" FontSize="20" FontWeight="Bold" Foreground="#FFEE1010" Background="#FF49E01C" Click="CheckPassword_Click"/>
+        <Button x:Name="CheckPassword" Content="SPRAWDZ" HorizontalAlignment="Left" VerticalAlignment="Top" Width="153" Margin="263,266,0,0" Height="46" FontSize="20" FontWeight="Bold" Foreground="#FFEE1010" Background="#FF49E01C" Click="CheckPassword_Click" />
         <Button x:Name="MenuGlowne" Content="Wroc" HorizontalAlignment="Left" VerticalAlignment="Top" Width="98" Margin="65,366,0,0" Height="34" FontSize="20" FontWeight="Bold" Foreground="#FFEE1010" Background="#FFE0D71C" Click="MenuGlowne_Click"/>
+
         <TextBox x:Name="TextBox2" HorizontalAlignment="Left" Height="23" Margin="502,335,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TextBox2_TextChanged"/>
+
 
     </Grid>
 </Window>

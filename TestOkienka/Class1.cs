@@ -11,9 +11,11 @@ namespace TestOkienka
     class PasswordChecker
 
     {
+
         String passConst = "Zupa Pomidorowa";
         String[] passArray = new String[3]
                {"kupa" , "gowno" , "sraka"};
+
 
         public void EqualMethod(string passWrittenEM)
        
@@ -58,6 +60,7 @@ namespace TestOkienka
                 }
             }
 
+
         public Boolean ContainsMethod(string passWrittenCM)
 
         {
@@ -80,6 +83,7 @@ namespace TestOkienka
                     }
                     
             }
+
 
         }
 
