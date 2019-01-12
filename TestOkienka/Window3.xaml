@@ -1,0 +1,20 @@
+﻿<Window x:Class="TestOkienka.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestOkienka"
+        mc:Ignorable="d"
+        Title="Window3" Height="500" Width="700" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FFB586C3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Sprawdz Hasło" HorizontalAlignment="Left" Margin="228,266,0,0" VerticalAlignment="Top" Width="195" Click="Password_Checker" Grid.ColumnSpan="2"/>
+        <Label Content="Array Method" HorizontalAlignment="Left" Margin="255,112,0,0" VerticalAlignment="Top" Width="144" Height="55" FontSize="20" FontWeight="Bold" TextOptions.TextFormattingMode="Display" Grid.ColumnSpan="2"/>
+        <Button Content="Powrót" HorizontalAlignment="Left" Margin="565,387,0,0" VerticalAlignment="Top" Width="117" Height="33" Click="Back" Grid.ColumnSpan="2"/>
+        <TextBox x:Name ="Pass" HorizontalAlignment="Left" Height="23" Margin="255,192,0,0" TextWrapping="Wrap" Text="Wpisz Hasło" VerticalAlignment="Top" Width="144" TextChanged="TextBox_TextChanged" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>

@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestOkienka"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
-    <Grid>
-        
+        Title="Equals Method" Height="500" Width="700" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FF749EF7">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="395*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Equals Method" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="248,70,0,0" Height="44" Width="236" FontFamily="MS Reference Sans Serif" FontSize="22" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name= "pass" HorizontalAlignment="Left" Height="23" Margin="248,176,0,0" TextWrapping="Wrap" Text="Wpisz Hasło" VerticalAlignment="Top" Width="236" TextChanged="TextBox_TextChanged"/>
+        <Button Content="SPRAWDZ HASL0&#xD;&#xA;" HorizontalAlignment="Left" Margin="302,265,0,0" VerticalAlignment="Top" Width="120" Height="19" Click="Password_Checker" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center" UseLayoutRounding="True" FontSize="11" RenderTransformOrigin="0.491,0.586" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.IsSharedSizeScope="True" FontWeight="Bold" Background="#FFF00000"/>
+        <Button Content="Powrót" HorizontalAlignment="Left" Margin="46,381,0,0" VerticalAlignment="Top" Width="164" Height="37" Click="Back"/>
+
     </Grid>
 </Window>
