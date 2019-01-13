@@ -48,8 +48,10 @@ namespace TestOkienka
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
-      
+            Window4 panel = new Window4();
+            panel.Show();
+            this.Close();
+
         }
     }
 
