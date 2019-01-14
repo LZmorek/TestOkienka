@@ -53,6 +53,13 @@ namespace TestOkienka
             this.Close();
 
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Window6 db = new Window6();
+            ;db.Show();
+            this.Close();
+        }
     }
 
 }
