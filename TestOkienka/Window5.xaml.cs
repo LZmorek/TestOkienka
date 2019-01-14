@@ -16,9 +16,7 @@ using System.Data.SQLite;
 
 namespace TestOkienka
 {
-    /// <summary>
-    /// Interaction logic for Window5.xaml
-    /// </summary>
+   
     public partial class Window5 : Window
     {
         public Window5()
@@ -31,11 +29,13 @@ namespace TestOkienka
             string del = TextBox.Text;
             SQLiteConnection DbCon = new SQLiteConnection("Data Source=Database.db;Version=3;FailIfMissing=True;");
             DbCon.Open();
-            string sql = ("DELETE FROM Passwords WHERE Password=" + del + "");
+            string sql = ("DELETE FROM Passwords WHERE Password= @password");
             SQLiteCommand command = new SQLiteCommand(sql, DbCon);
-            //command.Parameters.AddWithValue("@password", del);
+            command.Parameters.AddWithValue("@password", del);
             command.ExecuteNonQuery();
             DbCon.Close();
+            MessageBox.Show("Usunieto wybrane haslo");
+
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -48,6 +48,7 @@ namespace TestOkienka
             command.Parameters.AddWithValue("@password", pass);
             command.ExecuteNonQuery();
             DbCon.Close();
+            MessageBox.Show("Udane utworzenie nowego hasła");
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

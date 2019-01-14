@@ -17,6 +17,7 @@
         <Button Content="Equal&#xD;&#xA;Method" Click="Equal_Method" Width="137" Height="48" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="37,0,0,73"/>
         <Button Content="Contains&#xD;&#xA;Method" Margin="192,0,197,73" Click="Contains_Method" Width="160" HorizontalAlignment="Center" Height="48" VerticalAlignment="Bottom" RenderTransformOrigin="1.444,0.5"/>
         <Label Content="&#x9;&#x9;&#x9;Witamy!&#xD;&#xA;Zapraszamy do Zabawy w zgadywanki durnych haseł!&#xD;&#xA;Poniżej są trzy metody którymi zapisaliśmy hasła ,&#xD;&#xA;a ty masz odgadnac w tych metodach hasło.&#xD;&#xA;Powodzenia!&#xD;&#xA;" Height="184" Margin="40,45,49,0" VerticalAlignment="Top" FontSize="18" FontWeight="SemiBold" FontStyle="Italic" TextOptions.TextHintingMode="Animated" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Width="460"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="526,264,0,0" VerticalAlignment="Top" Width="134" RenderTransformOrigin="0.466,0.396" Height="41" Click="Button_Click"/>
+        <Button Content="Panel Administratora" HorizontalAlignment="Left" Margin="526,264,0,0" VerticalAlignment="Top" Width="134" RenderTransformOrigin="0.466,0.396" Height="41" Click="Button_Click"/>
+        <Button Content="Database Method" HorizontalAlignment="Left" Margin="264,264,0,0" VerticalAlignment="Top" Width="160" Height="41" Click="Button_Click_1"/>
     </Grid>
 </Window>
