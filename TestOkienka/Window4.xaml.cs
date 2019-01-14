@@ -27,11 +27,11 @@ namespace TestOkienka
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Window5 baza = new Window5();
-            String login = "Noraz";
-            String password = "Noraz";
+            String login = "Noraz", login2 = "Gemi";
+            String password = "Noraz", password2 = "Gemi";
             string log = Login.Text;
             string pass = Password.Text;
-            if (log.Equals(login) || pass.Equals(password))
+            if (log.Equals(login) && pass.Equals(password)||log.Equals(login2)&& pass.Equals(password2))
             {
                 baza.Show();
                 this.Close();
