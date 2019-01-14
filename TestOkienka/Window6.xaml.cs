@@ -28,8 +28,27 @@ namespace TestOkienka
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
-            string check = TextBox.Text;
+            string pass =TextBox.Text;
+
+            SQLiteConnection DbCon = new SQLiteConnection("Data Source=Database.db;Version=3;FailIfMissing=True;");
+            DbCon.Open();
+            string sql = ("SELECT FROM Passwords WHERE Password= @password");
+            SQLiteCommand command = new SQLiteCommand(sql, DbCon);
+
+            command.CommandText = ("SELECT count (*) FROM Passwords WHERE password= ('"+TextBox.Text+"')");
+            int count = Convert.ToInt32(command.ExecuteScalar());
+            if (count == 0)
+            {
+                MessageBox.Show("to nie jest poprawne haslo");
+                DbCon.Close();
+            }
+            else
+            {
+                MessageBox.Show("gratulacje");
+                DbCon.Close();
+            }
+
+            /*string check = TextBox.Text;
             SQLiteConnection DbCon = new SQLiteConnection("Data Source=Database.db;Version=3;FailIfMissing=True;");
             DbCon.Open();
             string sql = ("SELECT FROM Passwords WHERE Password= @password");
@@ -45,7 +64,7 @@ namespace TestOkienka
             else
             {
                 MessageBox.Show("niestety:( Sprobuj ponownie");
-            }
+            }*/
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

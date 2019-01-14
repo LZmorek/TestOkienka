@@ -87,5 +87,17 @@ namespace TestOkienka
         {
 
         }
+
+        private void Menu6_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            
+        }
+
+        private void Menu6_Click(object sender, RoutedEventArgs e)
+        {
+            Window6 db = new Window6();
+            db.Show();
+            this.Close();
+        }
     }
 }
