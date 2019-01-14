@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,22 +28,25 @@ namespace TestOkienka
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //SQLiteConnection.CreateFile("Database.db"); w tej wersji jest juz baza danych.
+           /* 
             SQLiteConnection DbCon = new SQLiteConnection("Data Source=Database.db;Version=3");
             DbCon.Open();
             MessageBox.Show("nawiazano polaczenie z nowa baza danych");
             string sql = ("CREATE TABLE Passwords (password string))");
             SQLiteCommand command = new SQLiteCommand(sql, DbCon);
             command.ExecuteNonQuery();
-            DbCon.Close();
+            DbCon.Close();*/
+            //Tutaj wsadzimy i przemianujemy buttona na usuwanie hasel:)
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            SQLiteConnection DbCon = new SQLiteConnection("Data Source=Database.db;Version=3;");
+            string pass = Textbox2.Text;
+            SQLiteConnection DbCon = new SQLiteConnection("Data Source=Database.db;Version=3;FailIfMissing=True;");
             DbCon.Open();
-            string sql = ("INSERT into Passwords (password) VAlUES ('" + Textbox2.Text + "')");
+            string sql = ("INSERT INTO Passwords (password) VAlUES (@password)");  
             SQLiteCommand command = new SQLiteCommand(sql, DbCon);
+            command.Parameters.AddWithValue("@password", pass);
             command.ExecuteNonQuery();
             DbCon.Close();
         }
@@ -58,19 +62,23 @@ namespace TestOkienka
         {
             SQLiteConnection DbCon = new SQLiteConnection("Data Source=Database.db;Version=3;");
             DbCon.Open();
-            string sql = "SELECT * from Passwords";
+            string sql = "SELECT * from Passwords ";
             SQLiteCommand command = new SQLiteCommand(sql, DbCon);
-            SQLiteDataReader reader = command.ExecuteReader();
-            Textbox.Text = (reader["Password"]).ToString();
+            command.ExecuteNonQuery();
+            SQLiteDataAdapter dataadp = new SQLiteDataAdapter(command);
+            DataTable dt = new DataTable("Passwords");
+            dataadp.Fill(dt);
+            DataGrid.ItemsSource = dt.DefaultView;
+            dataadp.Update(dt);
             DbCon.Close();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void Textbox2_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
 
-        private void Textbox2_TextChanged(object sender, TextChangedEventArgs e)
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
