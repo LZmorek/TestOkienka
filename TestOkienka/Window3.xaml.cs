@@ -11,15 +11,13 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.Windows.Navigation;
 
 namespace TestOkienka
 {
     
-    public partial class Window1 : Window
+    public partial class Window3 : Window
     {
-        
-        public Window1()
+        public Window3()
         {
             InitializeComponent();
         }
@@ -31,9 +29,9 @@ namespace TestOkienka
 
         private void Password_Checker(object sender, RoutedEventArgs e)
         {
-            string passWrittenEM = pass.Text;
-            PasswordChecker Equal = new PasswordChecker();
-            Equal.EqualMethod(passWrittenEM);
+            string passWrittenAM = Pass.Text;
+            PasswordChecker Array = new PasswordChecker();
+            Array.ArrayMethod(passWrittenAM);
 
         }
 
@@ -42,7 +40,6 @@ namespace TestOkienka
             MainWindow back = new MainWindow();
             back.Show();
             this.Close();
-
         }
     }
 }
