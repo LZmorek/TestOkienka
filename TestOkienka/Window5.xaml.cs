@@ -28,15 +28,14 @@ namespace TestOkienka
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           /* 
-            SQLiteConnection DbCon = new SQLiteConnection("Data Source=Database.db;Version=3");
+            string del = TextBox.Text;
+            SQLiteConnection DbCon = new SQLiteConnection("Data Source=Database.db;Version=3;FailIfMissing=True;");
             DbCon.Open();
-            MessageBox.Show("nawiazano polaczenie z nowa baza danych");
-            string sql = ("CREATE TABLE Passwords (password string))");
+            string sql = ("DELETE FROM Passwords WHERE Password=" + del + "");
             SQLiteCommand command = new SQLiteCommand(sql, DbCon);
+            //command.Parameters.AddWithValue("@password", del);
             command.ExecuteNonQuery();
-            DbCon.Close();*/
-            //Tutaj wsadzimy i przemianujemy buttona na usuwanie hasel:)
+            DbCon.Close();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -79,6 +78,11 @@ namespace TestOkienka
         }
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
