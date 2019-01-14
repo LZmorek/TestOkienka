@@ -85,7 +85,7 @@ namespace TestOkienka
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            
         }
 
         private void Menu6_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
@@ -95,9 +95,41 @@ namespace TestOkienka
 
         private void Menu6_Click(object sender, RoutedEventArgs e)
         {
-            Window6 db = new Window6();
-            db.Show();
-            this.Close();
+            
+            string pass = bazaTextBox.Text;
+
+            SQLiteConnection DbCon = new SQLiteConnection("Data Source=Database.db;Version=3;FailIfMissing=True;");
+            DbCon.Open();
+            string sql = ("SELECT FROM Passwords WHERE Password= @password");
+            SQLiteCommand command = new SQLiteCommand(sql, DbCon);
+
+            command.CommandText = ("SELECT count (*) FROM Passwords WHERE password= ('" + bazaTextBox.Text + "')");
+            int count = Convert.ToInt32(command.ExecuteScalar());
+            if (count == 0)
+            {
+                MessageBox.Show("to nie jest poprawne haslo");
+                DbCon.Close();
+            }
+            else
+            {
+                MessageBox.Show("gratulacje");
+                DbCon.Close();
+            }
+        }
+
+        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void BazaTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_GotMouseCapture(object sender, MouseEventArgs e)
+        {
+            TextBox.Clear();
         }
     }
 }

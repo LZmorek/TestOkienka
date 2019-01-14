@@ -10,14 +10,15 @@
         <Label Content="Zarzadzanie baza hasel" Margin="285,94,284,0" VerticalAlignment="Top" Height="59" FontSize="20"/>
         <Button Content="Usun Hasło" HorizontalAlignment="Left" Margin="127,269,0,0" VerticalAlignment="Top" Width="144" Height="42" Click="Button_Click"/>
         <Button HorizontalAlignment="Left" Margin="363,269,0,0" VerticalAlignment="Top" Width="108" Height="42" Click="Button_Click_1">
-            <Button Content="Button" Width="75"/>
+            <Button Content="Dodaj haslo" Width="75"/>
         </Button>
         <Button Content="Wroc" HorizontalAlignment="Left" Margin="84,381,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
-        <Button Content="Pokaz hasla" HorizontalAlignment="Left" Margin="597,269,0,0" VerticalAlignment="Top" Width="111" Height="42" Click="Button_Click_3"/>
-        <TextBox x:Name="Textbox2" HorizontalAlignment="Left" Height="23" Margin="363,341,0,0" TextWrapping="Wrap" Text="Dodaj haslo" VerticalAlignment="Top" Width="108" TextChanged="Textbox2_TextChanged"/>
-        <DataGrid x:Name="DataGrid" AutoGenerateColumns="True" HorizontalAlignment="Left" Height="146" Margin="597,94,0,0" VerticalAlignment="Top" Width="111" SelectionChanged="DataGrid_SelectionChanged"/>
-        <TextBox x:Name="TextBox" HorizontalAlignment="Left" Height="23" Margin="127,341,0,0" TextWrapping="Wrap" Text="wpisz haslo do usuniecia" VerticalAlignment="Top" Width="144" TextChanged="TextBox_TextChanged"/>
-        <Button x:Name="menu6" Content="test" Margin="84,220,633,179" DataContextChanged="Menu6_DataContextChanged" Click="Menu6_Click"/>
+        <Button Content="Pokaz hasla" HorizontalAlignment="Left" Margin="622,249,0,0" VerticalAlignment="Top" Width="111" Height="42" Click="Button_Click_3"/>
+        <TextBox x:Name="Textbox2" HorizontalAlignment="Left" Height="23" Margin="363,341,0,0" TextWrapping="Wrap" Text="Dodaj haslo"  VerticalAlignment="Top" Width="108" TextChanged="Textbox2_TextChanged" />
+        <DataGrid x:Name="DataGrid" AutoGenerateColumns="True" HorizontalAlignment="Left" Height="189" Margin="571,60,0,0" VerticalAlignment="Top" Width="200" SelectionChanged="DataGrid_SelectionChanged"/>
+        <TextBox x:Name="TextBox" HorizontalAlignment="Left" Height="23" Margin="127,341,0,0" TextWrapping="Wrap" Text="wpisz haslo do usuniecia" VerticalAlignment="Top" Width="144" TextChanged="TextBox_TextChanged" GotMouseCapture="TextBox_GotMouseCapture"/>
+        <Button x:Name="menu6" Content="sprawdz hasla w bazie" Margin="508,313,141,55" DataContextChanged="Menu6_DataContextChanged" Click="Menu6_Click" RenderTransformOrigin="1.16,-0.4"/>
+        <TextBox x:Name="bazaTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="sprawdz z baza" VerticalAlignment="Top" Width="143" Margin="508,369,0,0" TextChanged="TextBox_TextChanged_1" GotFocus="BazaTextBox_GotFocus"/>
 
     </Grid>
 </Window>

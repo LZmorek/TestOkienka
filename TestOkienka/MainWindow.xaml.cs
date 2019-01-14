@@ -60,6 +60,18 @@ namespace TestOkienka
             ;db.Show();
             this.Close();
         }
+
+        private void DataBmethod_Click(object sender, RoutedEventArgs e)
+        {
+            Window6 db = new Window6();
+            db.Show();
+            this.Close();
+        }
+
+        private void DataBmethod_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+
+        }
     }
 
 }
