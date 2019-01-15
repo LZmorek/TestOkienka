@@ -13,11 +13,11 @@
         <Grid.ColumnDefinitions>
 
         </Grid.ColumnDefinitions>
-        <Button Content="Array&#xD;&#xA;Method" RenderTransformOrigin="0.484,0.495" Click="Array_Method" Height="48" Width="134" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,34,73"/>
-        <Button Content="Equal&#xD;&#xA;Method" Click="Equal_Method" Width="137" Height="48" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="37,0,0,73"/>
-        <Button Content="Contains&#xD;&#xA;Method" Margin="192,0,197,73" Click="Contains_Method" Width="160" HorizontalAlignment="Center" Height="48" VerticalAlignment="Bottom" RenderTransformOrigin="1.444,0.5"/>
+        <Button Content="Array&#xD;&#xA;Method" RenderTransformOrigin="0.484,0.495" Click="Array_Method" Height="48" Width="134" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,44,133"/>
+        <Button Content="Equal&#xD;&#xA;Method" Click="Equal_Method" Width="137" Height="48" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="56,0,0,133"/>
+        <Button Content="Contains&#xD;&#xA;Method" Margin="270,0,264,133" Click="Contains_Method" Width="160" HorizontalAlignment="Center" Height="48" VerticalAlignment="Bottom" RenderTransformOrigin="1.444,0.5"/>
         <Label Content="&#x9;&#x9;&#x9;Witamy!&#xD;&#xA;Zapraszamy do Zabawy w zgadywanki durnych haseł!&#xD;&#xA;Poniżej są trzy metody którymi zapisaliśmy hasła ,&#xD;&#xA;a ty masz odgadnac w tych metodach hasło.&#xD;&#xA;Powodzenia!&#xD;&#xA;" Height="184" Margin="40,45,49,0" VerticalAlignment="Top" FontSize="18" FontWeight="SemiBold" FontStyle="Italic" TextOptions.TextHintingMode="Animated" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Width="460"/>
-        <Button Content="Panel Administratora" HorizontalAlignment="Left" Margin="526,264,0,0" VerticalAlignment="Top" Width="134" RenderTransformOrigin="0.466,0.396" Height="41" Click="Button_Click"/>
-        <Button Content="Database Method" HorizontalAlignment="Left" Margin="264,264,0,0" VerticalAlignment="Top" Width="160" Height="41" Click="Button_Click_1"/>
+        <Button Content="Panel Administratora" HorizontalAlignment="Left" Margin="550,420,0,0" VerticalAlignment="Top" Width="134" RenderTransformOrigin="0.466,0.396" Height="41" Click="Button_Click"/>
+        <Button x:Name="dataBmethod" Content="Database &#xD;&#xA;Method" HorizontalAlignment="Left" Margin="270,365,0,0" VerticalAlignment="Top" Width="160" Height="42" RenderTransformOrigin="-0.569,2.167" Click="DataBmethod_Click" DataContextChanged="DataBmethod_DataContextChanged"/>
     </Grid>
 </Window>

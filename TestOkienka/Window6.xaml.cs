@@ -27,14 +27,11 @@ namespace TestOkienka
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            string pass = TextBox.Text;
-
+            string pass =TextBox.Text;
             SQLiteConnection DbCon = new SQLiteConnection("Data Source=Database.db;Version=3;FailIfMissing=True;");
             DbCon.Open();
-            string sql = ("SELECT FROM Passwords WHERE Password= @password");
+            string sql = ("SELECT count (*) FROM Passwords WHERE password= ('"+pass+"')");
             SQLiteCommand command = new SQLiteCommand(sql, DbCon);
-
-            command.CommandText = ("SELECT count (*) FROM Passwords WHERE password= ('" + pass + "')");
             int count = Convert.ToInt32(command.ExecuteScalar());
             if (count == 0)
             {
@@ -46,6 +43,8 @@ namespace TestOkienka
                 MessageBox.Show("gratulacje");
                 DbCon.Close();
             }
+
+
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
